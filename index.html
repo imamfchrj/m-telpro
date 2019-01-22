@@ -3,9 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Jewel Theme">
-        <meta name="description" content="Wheel - Responsive and Modern Car Rental Website Template">
-        <meta name="keywords" content="">
+        <meta name="author" content="Firda Safridi">
+        <meta name="description" content="TRENDS - Telkom Rental and Delivery Services">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.tokenomy.com/">
+        <meta property="og:title" content="TRENDS - Telkom Rental and Delivery Services" />
+        <meta property="og:description" content="TRENDS - Telkom Rental and Delivery Services" />
+        <meta property="og:image" content="http://trends.gsd.co.id/assets/img/logo-trends-red.png" />
+        <meta property="og:image:type" content="image/png">
+        <meta name="keywords" content="Sewa Mobil Online, rental mobil online, Jasa rental mobil, sewa mobil murah, rental mobil jakarta, jasa sewa mobil murah, sewa mobil jakarta, jasa sewa mobil, rental mobil murah, sewa mobil, harga sewa mobil jakarta, harga sewa mobil bandung, harga rental mobil">
         <title> TRENDS - Telkom Rental and Delivery Service</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <!-- reset css -->
@@ -64,25 +70,35 @@
                         <div class="wheel-navigation">
                             <nav id="dl-menu">
                                 <!-- class="dl-menu" -->
-                                <ul class="main-menu dl-menu">
+                                <ul class="main-menu dl-menu" >
                                     <li class="menu-item   current-menu-parent   active-color ">
                                         <a href="#">Home</a>
                                     </li>
-                                    <li class="menu-item current-menu-parent  ">
-                                        <a href="#"> Visi & Misi </a>
-                                        <!--class=" dl-submenu "-->
-                                    </li>
-                                    <li class="menu-item   ">
-                                        <a href="#">Layanan</a>
-                                    </li>
-                                    <li class="menu-item  ">
-                                        <a href="#">Komitmen</a>
-                                    </li>
+                                    <li class="menu-item current-menu-parent menu-item-has-children  ">
+                                            <a href="#"> Service & Product <span class="fa fa-angle-right "></span></a>
+                                            <!--class=" dl-submenu "-->
+                                            <ul class="sub-menu dl-submenu">
+                                                <li class="menu-item current-menu-item">
+                                                    <a href="#car-list-grid">Service</a>
+                                                </li>
+                                                <li class="menu-item current-menu-item">
+                                                    <a href="#car-list-3col2">Product</a>
+                                                </li>
+                                                <li class="menu-item current-menu-item">
+                                                    <a href="#car-listing-details">Service Area</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item current-menu-parent  ">
+                                            <a href="#">Costumer</a>
+                                            <!--class=" dl-submenu "-->
+                                        </li>
+                                        <li class="menu-item current-menu-parent  ">
+                                            <a href="#">News</a>
+                                            <!--class=" dl-submenu "-->
+                                        </li>
                                     <li class="menu-item ">
-                                        <a href="#">Area Pelayanan</a>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="#">Tentang Kami</a>
+                                        <a href="#">About Us</a>
                                     </li>
                                 </ul>
                                 <div class="nav-menu-icon"><i></i></div>
@@ -105,9 +121,10 @@
                 </div>
                 <div class="col-lg-6 col-lg-pull-6  padd-lr0">
                     <div class="wheel-start-form">
+                        <h2 style="color:white;font-weight: 600;margin-bottom:28px;">FORM ORDER</h2>
                         <form action="user/register.html">
-                            <label for="input-val11"><span>Subjek</span>
-                            <input type="text" placeholder="">
+                            <label for="input-val11"><span>Company Name</span>
+                            <input type="text" placeholder="Ex: Pt. Abc">
                             </label>
                             <label for="input-val12"><span>Lokasi Delivery</span>
                             <input type="text" id='input-val12' placeholder="ZIP, City, Airport or Address">
@@ -115,46 +132,55 @@
                             <div class="clearfix">
                                 
                                     <div class="wheel-date">
-                                            <span>Jenis Mobil</span>
+                                            <span>Car Type</span>
+                                            <select class="selectpicker">
+                                                <option>SUV</option>
+                                                <option>Luxury</option>
+                                                <option>MVP</option>
+                                                <option>BUS</option>
+                                                <option>Cargo</option>   
+                                            </select>
+                                        </div>
+                                        <div class="wheel-date">
+                                            <span>Brand Car</span>
+                                            <select class="selectpicker"> 
+                                                <option>Toyota</option>
+                                                <option>BMW</option>
+                                                <option>Daihatsu</option>
+                                                <option>Volvo</option>
+                                                <option>Mitshubishi</option>
+                                                <option>Suzuki</option>
+                                                <option>Mercedes</option>
+                                            </select>
+                                        </div>
+                                        <div class="wheel-date">
+                                            <span>Variety Car</span>
                                             <select class="selectpicker">
                                                 <option>Avanza</option>
                                                 <option>Innova</option>
                                                 <option>CRV</option>
                                                 <option>BMW </option>
-                                                <option>Pick Up</option>
+                                                <option>Pick Up</option>   
                                             </select>
                                         </div>
                                         <div class="wheel-date">
-                                            <span>Tahun Mobil</span>
-                                            <select class="selectpicker">
-                                                    <option>2019</option>
-                                                    <option>2018</option>
-                                                    <option>2017</option>
-                                                    <option>2016</option>
-                                                    <option>2015</option>
-                                                    <option>2014</option>
-                                                    <option>2013</option>
-                                                    <option>2012</option>
-                                                    <option>2011</option>
-                                            </select>
-                                        </div>
-                                        <div class="wheel-date">
-                                                <span>Warna</span>
+                                                <span>Color</span>
                                                 <select class="selectpicker">
-                                                    <option>Hitam</option>
-                                                    <option>Merah</option>
-                                                    <option>Abuk</option>
-                                                    <option>Biru </option>
+                                                    <option>Random</option>
+                                                    <option>Black</option>
+                                                    <option>Red</option>
+                                                    <option>Silver</option>
+                                                    <option>Blue</option>
                                                 </select>
                                             </div>
-                                            <div class="wheel-date">
-                                                <span>Transmisi</span>
+                                            <!-- <div class="wheel-date">
+                                                <span>Transmission</span>
                                                 <select class="selectpicker">
                                                         <option>Matic</option>
                                                         <option>Manual</option>
                                                 </select>
-                                            </div>
-                                <div class="wheel-date">
+                                            </div> -->
+                                <!-- <div class="wheel-date">
                                     <span>Pickup Date</span>
                                     <label for="input-val13" class="fa fa-calendar">
                                     <input  class="datetimepicker" id='input-val13' type="text" value="29 Apr">
@@ -191,10 +217,10 @@
                                             <option>Tidak</option>
                                             <option>Ya</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                             </div>
                             <label for="input-val17" class="promo">
-                            <input type="text" id='input-val17' placeholder="Catatan">
+                            <input type="text" id='input-val17' placeholder="Note : Branding, Delivery time, etc">
                             </label>
                             <label for="input-val18" class="promo promo2">
                             <button class="wheel-btn" id="input-val18">Sewa</button>
