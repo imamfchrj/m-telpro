@@ -2,7 +2,7 @@
 
 class Users extends CI_Controller {
 	
-	public function index()
+	public function dashboard()
 	{
 		$data['menu']="home";
 		$this->load->view('users/dashboard',$data);

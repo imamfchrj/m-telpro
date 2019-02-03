@@ -7,13 +7,45 @@ class Dashboard extends All_Controller {
 		$data['menu']="home";
 		$this->load->view('landing_page/main',$data);
 	}
-
-
-	public function kambing2()
+	
+	public function services()
 	{
-		$data['menu']="home";
-		$this->load->view('landing_page/main',$data);
+		$data['menu']="services";
+		$this->load->view('landing_page/services',$data);
 	}
+	
+	public function products()
+	{
+		$data['menu']="services";
+		$this->load->view('landing_page/products',$data);
+	}
+	
+	public function area()
+	{
+		$data['menu']="services";
+		$this->load->view('landing_page/area',$data);
+	}
+	
+	public function costumer()
+	{
+		$data['menu']="costumer";
+		$this->load->view('landing_page/costumer',$data);
+	}
+	
+	public function news()
+	{
+		$data['menu']="news";
+		$this->load->view('landing_page/news',$data);
+	}
+	
+	public function about_us()
+	{
+		$data['menu']="about_us";
+		$this->load->view('landing_page/about_us',$data);
+	}
+
+
+
 
 	public function login(){
 		$data['menu']="home";

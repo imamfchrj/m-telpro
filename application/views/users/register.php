@@ -1,17 +1,17 @@
 <?php
    $this->load->view('users/layout/header_login');
    ?>
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(../images/bg3.jpeg) ;">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(<?=base_url()?>images/bg3.jpeg) ;">
             <div class="auth-box on-sidebar">
                 <div>
                     <div class="logo">
-                        <span class="db"><img src="assets/images/logo-icon.png" alt="logo" /></span>
+                        <span class="db"><img src="<?=base_url()?>assets/admin/assets/images/logo-icon.png" alt="logo" /></span>
                         <h5 class="font-medium m-b-20">Sign Up to User</h5>
                     </div>
                     <!-- Form -->
                     <div class="row">
                         <div class="col-12">
-                            <form class="form-horizontal m-t-20" action="login.html">
+                            <form class="form-horizontal m-t-20" action="<?=base_url()?>users/login">
                                 <div class="form-group row ">
                                     <div class="col-12 ">
                                         <input class="form-control form-control-lg" type="text"  placeholder="Name">

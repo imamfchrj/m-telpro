@@ -71,34 +71,34 @@
                             <nav id="dl-menu">
                                 <!-- class="dl-menu" -->
                                 <ul class="main-menu dl-menu" >
-                                    <li class="menu-item   current-menu-parent   active-color ">
+                                    <li class="menu-item   current-menu-parent   <?php if($menu=="home") echo "active-color"?> ">
                                         <a href="<?=base_url()?>#">Home</a>
                                     </li>
-                                    <li class="menu-item current-menu-parent menu-item-has-children  ">
+                                    <li class="menu-item current-menu-parent menu-item-has-children <?php if($menu=="services") echo "active-color"?>  ">
                                             <a href="<?=base_url()?>#"> Service & Product <span class="fa fa-angle-right "></span></a>
                                             <!--class=" dl-submenu "-->
                                             <ul class="sub-menu dl-submenu">
                                                 <li class="menu-item current-menu-item">
-                                                    <a href="<?=base_url()?>#car-list-grid">Service</a>
+                                                    <a href="<?=base_url()?>services">Service</a>
                                                 </li>
                                                 <li class="menu-item current-menu-item">
-                                                    <a href="<?=base_url()?>#car-list-3col2">Product</a>
+                                                    <a href="<?=base_url()?>products">Product</a>
                                                 </li>
                                                 <li class="menu-item current-menu-item">
-                                                    <a href="<?=base_url()?>#car-listing-details">Service Area</a>
+                                                    <a href="<?=base_url()?>area">Service Area</a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item current-menu-parent  ">
-                                            <a href="<?=base_url()?>#">Costumer</a>
+                                        <li class="menu-item current-menu-parent <?php if($menu=="costumer") echo "active-color"?> ">
+                                            <a href="<?=base_url()?>costumer">Costumer</a>
                                             <!--class=" dl-submenu "-->
                                         </li>
-                                        <li class="menu-item current-menu-parent  ">
-                                            <a href="<?=base_url()?>#">News</a>
+                                        <li class="menu-item current-menu-parent <?php if($menu=="news") echo "active-color"?> ">
+                                            <a href="<?=base_url()?>news">News</a>
                                             <!--class=" dl-submenu "-->
                                         </li>
-                                    <li class="menu-item ">
-                                        <a href="<?=base_url()?>#">About Us</a>
+                                    <li class="menu-item <?php if($menu=="about_us") echo "active-color"?> ">
+                                        <a href="<?=base_url()?>about_us">About Us</a>
                                     </li>
                                 </ul>
                                 <div class="nav-menu-icon"><i></i></div>
