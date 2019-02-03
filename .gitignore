@@ -19,3 +19,4 @@ application/logs/*
 .DS_Store
 .DS_Store
 application/env.php
+application/env.php
