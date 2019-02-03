@@ -29,7 +29,7 @@
         <script src="assets/js/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="">
+    <body class=" wheel-bg2 ">
         <!-- MAIN -->
         <div class="load-wrap">
             <div class="wheel-load">

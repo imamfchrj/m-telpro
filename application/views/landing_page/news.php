@@ -2,550 +2,246 @@
    $this->load->view('landing_page/layout/header');
    ?>
 
-<div class="wheel-start" style="background-image: url('images/bg1.jpeg');background-size: 100% 100%;">
-            <!-- <img src="<?=base_url()?>" alt="" class="wheel-img"> -->
-            <div class="container padd-lr0">
-                <div class="col-lg-6 col-lg-push-6 ">
-                    <header class="wheel-header marg-lg-b100 marg-lg-t200  marg-md-b0 marg-md-t0">
-                        <h1>TRENDS  </h1>
-                        <h2>Telkom Rental and Delivery Service</h2>
-                        <span>Siap melayani kendaraan anda dengan aman dan nyaman</span>
-                    </header>
-                </div>
-                <div class="col-lg-6 col-lg-pull-6  padd-lr0">
-                    <div class="wheel-start-form">
-                        <h2 style="color:white;font-weight: 600;margin-bottom:28px;">FORM ORDER</h2>
-                        <form action="<?=base_url()?>users">
-                            <label for="input-val11"><span>Company Name</span>
-                            <input type="text" placeholder="Ex: Pt. Abc">
-                            </label>
-                            <label for="input-val12"><span>Lokasi Delivery</span>
-                            <input type="text" id='input-val12' placeholder="ZIP, City, Airport or Address">
-                            </label>
-                            <div class="clearfix">
-                                
-                                    <div class="wheel-date">
-                                            <span>Car Type</span>
-                                            <select class="selectpicker">
-                                                <option>SUV</option>
-                                                <option>Luxury</option>
-                                                <option>MVP</option>
-                                                <option>BUS</option>
-                                                <option>Cargo</option>   
-                                            </select>
-                                        </div>
-                                        <div class="wheel-date">
-                                            <span>Brand Car</span>
-                                            <select class="selectpicker"> 
-                                                <option>Toyota</option>
-                                                <option>BMW</option>
-                                                <option>Daihatsu</option>
-                                                <option>Volvo</option>
-                                                <option>Mitshubishi</option>
-                                                <option>Suzuki</option>
-                                                <option>Mercedes</option>
-                                            </select>
-                                        </div>
-                                        <div class="wheel-date">
-                                            <span>Variety Car</span>
-                                            <select class="selectpicker">
-                                                <option>Avanza</option>
-                                                <option>Innova</option>
-                                                <option>CRV</option>
-                                                <option>BMW </option>
-                                                <option>Pick Up</option>   
-                                            </select>
-                                        </div>
-                                        <div class="wheel-date">
-                                                <span>Color</span>
-                                                <select class="selectpicker">
-                                                    <option>Random</option>
-                                                    <option>Black</option>
-                                                    <option>Red</option>
-                                                    <option>Silver</option>
-                                                    <option>Blue</option>
-                                                </select>
-                                            </div>
-                                            <!-- <div class="wheel-date">
-                                                <span>Transmission</span>
-                                                <select class="selectpicker">
-                                                        <option>Matic</option>
-                                                        <option>Manual</option>
-                                                </select>
-                                            </div> -->
-                                <!-- <div class="wheel-date">
-                                    <span>Pickup Date</span>
-                                    <label for="input-val13" class="fa fa-calendar">
-                                    <input  class="datetimepicker" id='input-val13' type="text" value="29 Apr">
-                                    </label>
-                                </div>
-                                <div class="wheel-date ">
-                                    <span>Pickup time</span>
-                                    <label for="input-val14" class="fa fa-clock-o">
-                                    <input class="timepicker" id='input-val14' type="text" value="18:00">
-                                    </label>
-                                </div>
-                                <div class="wheel-date">
-                                    <span>Return Date</span>
-                                    <label for="input-val15" class="fa fa-calendar">
-                                    <input  class="datetimepicker" id='input-val15' type="text" value="29 Apr">
-                                    </label>
-                                </div>
-                                <div class="wheel-date">
-                                    <span>Return Time</span>
-                                    <label for="input-val16" class="fa fa-clock-o">
-                                    <input class="timepicker" id='input-val16' type="text" value="18:00">
-                                    </label>
-                                </div>
-                                <div class="wheel-date">
-                                    <span>Plat</span>
-                                    <select class="selectpicker">
-                                            <option>Ganjil</option>
-                                            <option>Genap</option>
-                                    </select>
-                                </div>
-                                <div class="wheel-date">
-                                        <span>Branding</span>
-                                        <select class="selectpicker">
-                                            <option>Tidak</option>
-                                            <option>Ya</option>
-                                        </select>
-                                    </div> -->
-                            </div>
-                            <label for="input-val17" class="promo">
-                            <input type="text" id='input-val17' placeholder="Note : Branding, Delivery time, etc">
-                            </label>
-                            <label for="input-val18" class="promo promo2">
-                            <button class="wheel-btn" id="input-val18">Sewa</button>
-                            </label>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ////////////////////////////////////////////////////////////// -->
-        <div class="wheel-bg2">
+    <div class="wheel-start3">
+            <img src="images/bg1.jpeg" alt="" class="wheel-img">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <div class="wheel-header text-center marg-lg-t140 marg-lg-b340 marg-md-t140 marg-md-b140 marg-sm-t70 ">
-                            <h5>Online Terbesar </h5>
-                            <h3>Penyewaan <span>Mobil</span>  dan  <span>Kendaraan</span></h3>
+                    <div class="col-xs-12 padd-lr0">
+                        <div class="wheel-start3-body clearfix marg-lg-t255 marg-lg-b75 marg-sm-t190 marg-xs-b30">
+                            <h3>Our Blog</h3>
+                            <ol class="breadcrumb">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#"> pages </a></li>
+                                <li class="active">Blog</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="wheel-clients">
-            <div class="container padd-lr0">
+        
+        <div class="wheel-blog-wrap marg-lg-t150  marg-sm-t50">
+            <div class="container  ">
                 <div class="row">
-                    <div class="col-md-4 padd-r0 padd-md-lr15">
-                        <div class="wheel-service-item text-center wheel-bg3">
-                            <div class="wheel-service-logo">
-                                <img src="<?=base_url()?>images/ico1.png" alt="">
+                    <div class="col-md-8  padd-lr0">
+                        <article class="wheel-blog-item">
+                            <div class="wheel-blog-data">
+                                <i>29 April</i>
                             </div>
-                            <h5>Paling Terjangkau</h5>
-                            <p>This is Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 padd-lr0 padd-md-lr15">
-                        <div class="wheel-service-item text-center wheel-service-active wheel-bg4">
-                            <div class="wheel-service-logo">
-                                <img src="<?=base_url()?>images/ico2.png" alt="">
+                            <div class="wheel-blog-logo"><img src="images/i24.jpg" alt=""></div>
+                            <header class="wheel-blog-header">
+                                <h5><a href="news-details.html">Seamlessly generate focused content for robust infrastructures Credibly</a></h5>
+                            </header>
+                            <div class="wheel-blog-info">
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt </p>
                             </div>
-                            <h5>Nilai Terbaik</h5>
-                            <p>This is of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 padd-l0 padd-md-lr15">
-                        <div class="wheel-service-item  text-center wheel-bg5">
-                            <div class="wheel-service-logo">
-                                <img src="<?=base_url()?>images/ico3.png" alt="">
-                            </div>
-                            <h5>Excellent Service</h5>
-                            <p>This is of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 ">
-                    <div class="wheel-service-img">
-                        <img src="<?=base_url()?>images/mobil.png" alt="" class="wheel-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /////////////////////////////////////////////////// -->
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="wheel-header wheel-testi-header text-center marg-lg-t155 marg-lg-b65 marg-md-t50  marg-md-b50">
-                        <h3>Misi Kami adalah kepuasan <span>Client</span> </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="wheel-testimonial text-center">
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                        <div class="wheel-testimonial-info">
-                            <span>Rm. Advitor Juto Kusmono</span>
-                            <img src="<?=base_url()?>images/l1.png" alt="">
-                            <p> Manager Marketing & Business Development</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row">
-                <div class="col-xs-12 padd-lr0 ">
-                    <div class="wheel-testimonial-item">
-                        <i class="fa fa-users"></i>
-                        <span data-to="753" data-speed="10000"></span><b>+</b>
-                        <p>Dedicated Employees</p>
-                    </div>
-                    <div class="wheel-testimonial-item">
-                        <i class="fa fa-thumbs-o-up"></i>
-                        <span data-to="9053" data-speed="5000"></span><b>+</b>
-                        <p>Satisfied Customers</p>
-                    </div>
-                    <div class="wheel-testimonial-item">
-                        <i class="fa  fa-car"></i>
-                        <span data-to="529" data-speed="6000"></span><b>+</b>
-                        <p>100% Fit Veihicles</p>
-                    </div>
-                    <div class="wheel-testimonial-item">
-                        <i class="fa fa-trophy"></i>
-                        <span data-to="111" data-speed="1000"></span><b>+</b>
-                        <p>Int. Awards Achieved</p>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-        <!-- /////////////////////////////////////////////////////////// -->
-        <!-- <div class="wheel-collection wheel-bg2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="wheel-header text-center marg-lg-t140 marg-lg-b65  marg-md-t50 ">
-                            <h5>We have a Great </h5>
-                            <h3>collection of <span>vehicles</span></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="tabs">
-                            <div class="tabs-header">
+                            <footer class="wheel-blog-links clearfix">
                                 <ul>
-                                    <li class="active"><a href="#">Most Popular</a></li>
-                                    <li><a href="#">Newly Added</a></li>
-                                    <li><a href="#">On Sale</a></li>
+                                    <li><i class="fa fa-user"></i><a href="" class="">Firda Safridi</a></li>
+                                    <li><i class="fa fa-tags"></i><a href="" class="">Shopping, Branding</a></li>
+                                    
                                 </ul>
+                                <a href="" class="wheel-read-more">Read More </a>
+                            </footer>
+                        </article>
+                        <article class="wheel-blog-item">
+                            <div class="wheel-blog-data">
+                                <i>29 April</i>
                             </div>
-                            <div class="tabs-content  marg-lg-b30">
-                                <div class="tabs-item active ">
-                                    <div class="swiper-container" data-autoplay="0" data-touch="1" data-mouse="0" data-xs-slides="1" data-sm-slides="2" data-md-slides="4" data-lg-slides="6" data-add-slides="6" data-slides-per-view="responsive" data-loop="1" data-speed="1000">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Nissan Juke' data-carClass='Luxury Sports Car' data-price='$100' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/z-car-1.png'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Chevrolet Malibu' data-carClass='Luxury Sports Car' data-price='$100' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i32.jpg'><img src="<?=base_url()?>images/i5.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='Bugatti Veyron' data-carClass='Luxury Sports Car' data-price='2' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i33.jpg'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Audi S4' data-carClass='Luxury Sports Car' data-price='$10' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i34.jpg'><img src="<?=base_url()?>images/i4.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2017 Hyundai Santa Fe' data-carClass='Luxury Sports Car' data-price='4' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i36.jpg'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='Porsche Boxter Spyder' data-carClass='Luxury Sports Car' data-price='4' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i37.jpg'><img src="<?=base_url()?>images/i2.png" alt=""></div>
-                                            </div>
+                            <div class="wheel-blog-logo">
+                                <div class="swiper-container swiper-swiper-unique-id-0 initialized" data-autoplay="7000" data-touch="1" data-mouse="0" data-xs-slides="1" data-sm-slides="1" data-md-slides="1" data-lg-slides="1" data-add-slides="1" data-slides-per-view="responsive" data-loop="1" data-speed="1000" id="swiper-unique-id-0">
+                                    <div class="swiper-wrapper" style="width: 4320px; transform: translate3d(-1440px, 0px, 0px); transition-duration: 1s; height: 420px;"><div xmlns="http://www.w3.org/1999/xhtml" class="swiper-slide swiper-slide-duplicate" style="width: 720px; height: 420px;">
+                                            <div class="wheel-blog-slides"><img src="images/i24.jpg" alt=""></div>
                                         </div>
-                                        <div class="swiper-arrow-left fa fa-angle-left"></div>
-                                        <div class="swiper-arrow-right fa fa-angle-right"></div>
-                                        <div class="pagination"></div>
-                                    </div>
-                                </div>
-                                <div class="tabs-item  ">
-                                    <div class="swiper-container" data-autoplay="0" data-touch="1" data-mouse="0" data-xs-slides="1" data-sm-slides="2" data-md-slides="4" data-lg-slides="6" data-add-slides="6" data-slides-per-view="responsive" data-loop="1" data-speed="1000">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Nissan Juke' data-carClass='Luxury Sports Car' data-price='$100' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/z-car-1.png'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Chevrolet Malibu' data-carClass='Luxury Sports Car' data-price='$100' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i32.jpg'><img src="<?=base_url()?>images/i5.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='Bugatti Veyron' data-carClass='Luxury Sports Car' data-price='2' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i33.jpg'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Audi S4' data-carClass='Luxury Sports Car' data-price='$10' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i34.jpg'><img src="<?=base_url()?>images/i4.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2017 Hyundai Santa Fe' data-carClass='Luxury Sports Car' data-price='4' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i36.jpg'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='Porsche Boxter Spyder' data-carClass='Luxury Sports Car' data-price='4' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i37.jpg'><img src="<?=base_url()?>images/i2.png" alt=""></div>
-                                            </div>
+                                        <div class="swiper-slide" style="width: 720px; height: 420px;">
+                                            <div class="wheel-blog-slides"><img src="images/i24.jpg" alt=""></div>
                                         </div>
-                                        <div class="swiper-arrow-left fa fa-angle-left"></div>
-                                        <div class="swiper-arrow-right fa fa-angle-right"></div>
-                                        <div class="pagination"></div>
-                                    </div>
-                                </div>
-                                <div class="tabs-item  ">
-                                    <div class="swiper-container" data-autoplay="0" data-touch="1" data-mouse="0" data-xs-slides="1" data-sm-slides="2" data-md-slides="4" data-lg-slides="6" data-add-slides="6" data-slides-per-view="responsive" data-loop="1" data-speed="1000">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Nissan Juke' data-carClass='Luxury Sports Car' data-price='$100' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/z-car-1.png'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Chevrolet Malibu' data-carClass='Luxury Sports Car' data-price='$100' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i32.jpg'><img src="<?=base_url()?>images/i5.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='Bugatti Veyron' data-carClass='Luxury Sports Car' data-price='2' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i33.jpg'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2016 Audi S4' data-carClass='Luxury Sports Car' data-price='$10' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i34.jpg'><img src="<?=base_url()?>images/i4.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='2017 Hyundai Santa Fe' data-carClass='Luxury Sports Car' data-price='4' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i36.jpg'><img src="<?=base_url()?>images/i3.png" alt=""></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="wheel-collection-item" data-name='Porsche Boxter Spyder' data-carClass='Luxury Sports Car' data-price='4' data-text='Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.' data-bags='2 Bags' data-passenger='2 PASSENGERS' data-speed='5.6/100 MPG' data-img='images/i37.jpg'><img src="<?=base_url()?>images/i2.png" alt=""></div>
-                                            </div>
+                                        <div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 720px; height: 420px;">
+                                            <div class="wheel-blog-slides"><img src="images/i25.jpg" alt=""></div>
                                         </div>
-                                        <div class="swiper-arrow-left fa fa-angle-left"></div>
-                                        <div class="swiper-arrow-right fa fa-angle-right"></div>
-                                        <div class="pagination"></div>
-                                    </div>
+                                        <div class="swiper-slide" style="width: 720px; height: 420px;">
+                                            <div class="wheel-blog-slides"><img src="images/i26.jpg" alt=""></div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 720px; height: 420px;">
+                                            <div class="wheel-blog-slides"><img src="images/i24.jpg" alt=""></div>
+                                        </div>
+                                    <div xmlns="http://www.w3.org/1999/xhtml" class="swiper-slide swiper-slide-duplicate" style="width: 720px; height: 420px;">
+                                            <div class="wheel-blog-slides"><img src="images/i24.jpg" alt=""></div>
+                                        </div></div>
+                                    <div class="pagination pagination-swiper-unique-id-0"><span class="swiper-pagination-switch" style="display: inline-block;"></span><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch" style="display: inline-block;"></span><span class="swiper-pagination-switch" style="display: inline-block;"></span><span class="swiper-pagination-switch" style="display: inline-block;"></span></div>
+                                    <div class="swiper-arrow-left fa fa-angle-left"></div>
+                                    <div class="swiper-arrow-right fa fa-angle-right"></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-5 padd-lr0">
-                        <div class="wheel-collection-info">
-                            <div class="wheel-collection-text">
-                                <h4 class="car-name">2016 Nissan Juke</h4>
-                                <span class="car-class">Luxury Sports Car</span>
-                                <h5><b>$79 <sup>00</sup></b>/Day</h5>
-                                <p class="car-text">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit. </p>
+                            <header class="wheel-blog-header">
+                                <h5><a href="news-details.html">Distinctively communicate customized services without granular human capital</a></h5>
+                            </header>
+                            <div class="wheel-blog-info">
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt </p>
+                            </div>
+                            <footer class="wheel-blog-links clearfix">
                                 <ul>
-                                    <li><i class="fa fa-suitcase"></i><span class="car-bags">2 Bags</span></li>
-                                    <li><i class="fa fa-user"></i><span class="car-passengers">2 Passengers</span></li>
-                                    <li><i class="fa fa-tachometer"></i><span class="car-speed">5.6/100 MPG</span></li>
+                                    <li><i class="fa fa-user"></i><a href="" class="">Firda Safridi</a></li>
+                                    <li><i class="fa fa-tags"></i><a href="" class="">Shopping, Branding</a></li>
+                                    
                                 </ul>
-                                <a href="" class="wheel-btn">View All rental Car</a>
+                                <a href="" class="wheel-read-more">Read More </a>
+                            </footer>
+                        </article>
+                        <article class="wheel-blog-item">
+                            <div class="wheel-blog-data">
+                                <i>29 April</i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7 padd-lr0">
-                        <div class="wheel-collection-img"><img src="<?=base_url()?>images/i6.png" alt="" class="car-img"></div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- ////////////////////////////////////////////// -->
-        <div class="container padd-lr0">
-            <div class="row">
-                <div class="col-md-6 ">
-                    <div class="wheel-info-img  marg-lg-t150 marg-lg-b150 marg-md-t100 marg-md-b100">
-                        <img src="<?=base_url()?>images/bg2.jpeg" alt="" class="wheel-img">
-                    </div>
-                </div>
-                <div class="col-md-6 ">
-                    <div class="wheel-info-text  marg-lg-t150 marg-lg-b150 marg-md-t100 marg-md-b100 marg-sm-t50 marg-sm-b50">
-                        <div class="wheel-header">
-                            <h5>Who we are  </h5>
-                            <h3>We Love Our <span>Customers</span></h3>
-                        </div>
-                        <span>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </span>
-                        <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam </p>
-                        <a href="" class="wheel-btn">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ////////////////////////////////////////////////////// -->
-        <div class="wheel-deals text-center">
-            <img src="<?=base_url()?>images/bg3.jpeg" alt="" class="wheel-img">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="wheel-header">
-                            <h5>Be with us </h5>
-                            <h3>We offers great <span>deals</span></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="wheel-deals-text">
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                            <a href="" class="wheel-btn">Discover More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /////////////////////////////////////////////////////// -->
-        <div class="wheel-news  wheel-bg2 ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="wheel-header text-center marg-lg-t140 marg-lg-b90 marg-md-t50 ">
-                            <h5>our Blog </h5>
-                            <h3>the Latest <span>news </span></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 padd-l0  padd-md-lr15">
-                        <div class="wheel-news-item   wheel-bg1">
-                            <i class="">20 January 2019</i>
-                            <div class="wheel-news-item-img">
-                                <img src="<?=base_url()?>images/gam6.jpeg" alt="">
+                            <div class="wheel-blog-logo wheel-video">
+                                <iframe src="https://www.youtube.com/embed/AlA_EKqDOFM"></iframe>
                             </div>
-                            <div class="wheel-news-text">
-                                <h5><a href="#">Monotonectally build distinctive convergence and an attempt</a></h5>
-                                <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad...</p>
-                                <a href="">Read More </a>
+                            <header class="wheel-blog-header">
+                                <h5><a href="news-details.html">Credibly synthesize prospective experiences whereas alternative action items Competently</a></h5>
+                            </header>
+                            <div class="wheel-blog-info">
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt </p>
                             </div>
-                        </div>
+                            <footer class="wheel-blog-links clearfix">
+                                <ul>
+                                    <li><i class="fa fa-user"></i><a href="" class="">Firda Safridi</a></li>
+                                    <li><i class="fa fa-tags"></i><a href="" class="">Shopping, Branding</a></li>
+                                    
+                                </ul>
+                                <a href="" class="wheel-read-more">Read More </a>
+                            </footer>
+                        </article>
+                        <article class="wheel-blog-item">
+                            <div class="wheel-blog-data">
+                                <i>29 April</i>
+                            </div>
+                            <div class="wheel-blog-logo wheel-audio">
+                                <iframe src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F34019569&amp;auto_play=false&amp;show_artwork=true&amp;color=0066cc"></iframe>
+                            </div>
+                            <header class="wheel-blog-header">
+                                <h5><a href="news-details.html">Objectively restore error-free meta-services with just  in time</a></h5>
+                            </header>
+                            <div class="wheel-blog-info">
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt </p>
+                            </div>
+                            <footer class="wheel-blog-links clearfix">
+                                <ul>
+                                    <li><i class="fa fa-user"></i><a href="" class="">Firda Safridi</a></li>
+                                    <li><i class="fa fa-tags"></i><a href="" class="">Shopping, Branding</a></li>
+                                    
+                                </ul>
+                                <a href="" class="wheel-read-more">Read More </a>
+                            </footer>
+                        </article>
+                        <article class="wheel-blog-item">
+                            <div class="wheel-blog-data">
+                                <i>29 April</i>
+                            </div>
+                            <div class="wheel-blog-logo"><img src="images/i26.jpg" alt=""></div>
+                            <header class="wheel-blog-header">
+                                <h5><a href="news-details.html">Professionally productivate extensive leadership without web-enabled content</a></h5>
+                            </header>
+                            <div class="wheel-blog-info">
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt </p>
+                            </div>
+                            <footer class="wheel-blog-links clearfix">
+                                <ul>
+                                    <li><i class="fa fa-user"></i><a href="" class="">Firda Safridi</a></li>
+                                    <li><i class="fa fa-tags"></i><a href="" class="">Shopping, Branding</a></li>
+                                    
+                                </ul>
+                                <a href="" class="wheel-read-more">Read More </a>
+                            </footer>
+                        </article>
                     </div>
                     <div class="col-md-4">
-                        <div class="wheel-news-item   wheel-bg1">
-                            <i class="">20 January 2019</i>
-                            <div class="wheel-news-item-img">
-                                <img src="<?=base_url()?>images/gam5.jpeg" alt="">
+                        <aside class="wheel-widgets">
+                            <div class="wheel-widget-search">
+                                <div class="form">
+                                    <input type="text" placeholder="Search ..">
+                                    <button><i class="fa fa-search"></i></button>
+                                </div>
                             </div>
-                            <div class="wheel-news-text">
-                                <h5><a href="#">Monotonectally build distinctive convergence and an attempt</a></h5>
-                                <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad...</p>
-                                <a href="">Read More </a>
-                            </div>
-                        </div>
+                            <section class="wheel-widget-categories">
+                                <header>
+                                    <h5>Categories</h5>
+                                </header>
+                                <ul>
+                                    <li class=" clearfix"><a href="">Blogging </a> <i>11</i></li>
+                                    <li class=" clearfix"><a href=""> Transports </a><i>19</i></li>
+                                    <li class=" clearfix"><a href="">Excotic Cars</a><i>08</i></li>
+                                    <li class=" clearfix"><a href=""> Travelling</a><i>29</i></li>
+                                    <li class=" clearfix"><a href="">WooCommerce </a><i>05</i></li>
+                                    <li class=" clearfix"><a href="">News</a> <i>11</i></li>
+                                </ul>
+                            </section>
+                            <section class="wheel-widget-posts">
+                                <header>
+                                    <h5>Recent Posts</h5>
+                                </header>
+                                <ul>
+                                    <li>
+                                        <a href="" class="wheel-post clearfix">
+                                            <div class="wheel-post-img"><img src="images/ico11.jpg" alt=""></div>
+                                            <div class="wheel-post-content">
+                                                <h6>Monotonectally build  distinctive </h6>
+                                                <span class="wheel-date fa fa-calendar">May 30</span>
+                                                <span class="wheel-comment fa fa-comments">27</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="wheel-post clearfix">
+                                            <div class="wheel-post-img"><img src="images/ico12.jpg" alt=""></div>
+                                            <div class="wheel-post-content">
+                                                <h6>Monotonectally build  distinctive </h6>
+                                                <span class="wheel-date fa fa-calendar">May 30</span>
+                                                <span class="wheel-comment fa fa-comments">27</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="wheel-post clearfix">
+                                            <div class="wheel-post-img"><img src="images/ico13.jpg" alt=""></div>
+                                            <div class="wheel-post-content">
+                                                <h6>Monotonectally build  distinctive </h6>
+                                                <span class="wheel-date fa fa-calendar">May 30</span>
+                                                <span class="wheel-comment fa fa-comments">27</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <!-- <section class="wheel-tags">
+                                <header>
+                                    <h5>tags Cloud</h5>
+                                </header>
+                                <a href="" class="wheel-tag">News</a>
+                                <a href="" class="wheel-tag">Porsche</a>
+                                <a href="" class="wheel-tag">trevelling</a>
+                                <a href="" class="wheel-tag">Marcedes-benz</a>
+                                <a href="" class="wheel-tag">Cars</a>
+                                <a href="" class="wheel-tag">Hyundai</a>
+                                <a href="" class="wheel-tag">Land Rovers</a>
+                                <a href="" class="wheel-tag">Mclaren</a>
+                                <a href="" class="wheel-tag">Toyota</a>
+                            </section> -->
+                        </aside>
                     </div>
-                    <div class="col-md-4 padd-r0 padd-md-lr15">
-                        <div class="wheel-news-item   wheel-bg1">
-                            <i class="">20 January 2019</i>
-                            <div class="wheel-news-item-img">
-                                <img src="<?=base_url()?>images/gam4.jpeg" alt="">
-                            </div>
-                            <div class="wheel-news-text">
-                                <h5><a href="#">Monotonectally build distinctive convergence and an attempt</a></h5>
-                                <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad...</p>
-                                <a href="">Read More </a>
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 padd-lr0">
+                        <div class="wheel-page-pagination marg-lg-t60 marg-lg-b150  marg-sm-b50">
+                            <a class="prev page-numbers fa fa-arrow-left" href="#"></a>
+                            <a class="page-numbers" href="#">1</a>
+                            <span class="page-numbers current">2</span>
+                            <a class="page-numbers" href="#">3</a>
+                            <a class="page-numbers" href="#">4</a>
+                            <a class="next page-numbers fa fa-arrow-right" href="#"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- ////////////////////////////////////// -->
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-6 padd-lr0">
-                    <div class="wheel-info-text2 marg-lg-t140 marg-lg-b150 marg-md-t100 marg-md-b50 ">
-                        <div class="wheel-header">
-                            <h5>Did you know? </h5>
-                            <h3>We’ll let you<span> Tow</span></h3>
-                        </div>
-                        <span>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </span>
-                        <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam </p>
-                        <a href="" class="wheel-btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 padd-lr0">
-                    <div class="wheel-info-video marg-lg-t150 marg-lg-b150 marg-md-t50 marg-md-b50">
-                        <iframe  src="https://www.youtube.com/embed/XjfI8NjqD6k"  ></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //////////////////////////////////////////// -->
-        <div class="wheel-quote text-center">
-            <img src="<?=base_url()?>images/bg3.jpg" alt="" class="wheel-img">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="swiper-container" data-autoplay="7000" data-touch="1" data-mouse="0" data-xs-slides="1" data-sm-slides="1" data-md-slides="1" data-lg-slides="1" data-add-slides="1" data-slides-per-view="responsive" data-loop="1" data-speed="1000">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="wheel-quote-item">
-                                        <div class="wheel-quote-logo"><img src="<?=base_url()?>images/stars.png" alt="" height="80" width="80"></div>
-                                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                                        
-                                        <h6>Catrina Romero</h6>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="wheel-quote-item">
-                                        <div class="wheel-quote-logo"><img src="<?=base_url()?>images/stars.png" alt="" height="80" width="80"></div>
-                                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                                        
-                                        <h6>Catrina Romero</h6>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="wheel-quote-item">
-                                        <div class="wheel-quote-logo"><img src="<?=base_url()?>images/stars.png" alt="" height="80" width="80"></div>
-                                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-                                        
-                                        <h6>Catrina Romero</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pagination"></div>
-                        </div>
-                        <div class="swiper-outer-left fa fa-angle-left"></div>
-                        <div class="swiper-outer-right fa fa-angle-right"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12" >
-                        <div class="wheel-quote-partners" style="background:white;padding-top:40px;padding-bottom:40px;">
-                            <a href=""><img src="<?=base_url()?>images/pp1.png" width="150" height="60" alt=""></a>
-                            <a href=""><img src="<?=base_url()?>images/pp2.png" width="150" height="60" alt=""></a>
-                            <a href=""><img src="<?=base_url()?>images/pp3.png" width="150" height="60" alt=""></a>
-                            <a href=""><img src="<?=base_url()?>images/pp4.png" width="150" height="60" alt=""></a>
-                            <a href=""><img src="<?=base_url()?>images/pp5.png" width="150" height="60" alt=""></a>
-                            <a href=""><img src="<?=base_url()?>images/pp6.png" width="150" height="60" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /////////////////////////////// -->
-        <!-- <div class="wheel-subscribe wheel-bg2">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-6 padd-lr0">
-                        <div class="wheel-header">
-                            <h5>Newsletter Signup </h5>
-                            <h3>Subscribe & get<span> 20% </span> Off</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6 padd-lr0">
-                        <form action="#">
-                            <input type="text" placeholder="Your Email Adddress">
-                            <button class="wheel-btn">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- FOOTER -->
-        <!-- ///////////////// -->
 <?php
    $this->load->view('landing_page/layout/footer');
    ?>
