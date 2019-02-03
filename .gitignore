@@ -17,3 +17,5 @@ application/logs/*
 /vendor/
 .DS_Store
 .DS_Store
+.DS_Store
+application/env.php
