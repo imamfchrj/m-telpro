@@ -467,7 +467,7 @@
                 </div>
                 <div class="col-md-6 padd-lr0">
                     <div class="wheel-info-video marg-lg-t150 marg-lg-b150 marg-md-t50 marg-md-b50">
-                        <iframe  src="<?=base_url()?>https://www.youtube.com/embed/XjfI8NjqD6k"  ></iframe>
+                        <iframe  src="https://www.youtube.com/embed/XjfI8NjqD6k"  ></iframe>
                     </div>
                 </div>
             </div>
