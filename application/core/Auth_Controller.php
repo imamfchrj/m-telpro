@@ -59,7 +59,21 @@ class Auth_Controller extends CI_Controller
             'email'		=> "",
             'status'	=> "",
             'login_config' => ""));
-    }
+	}
+	
+	function _check_email($val){
+		$this->load->config('unallowed_email');
+		if(preg_match($this->config->item('unallowed_email_regex'), $val)){ 
+			$this->form_validation->set_message('_check_email', __('Email tidak diizinkan'));
+			return FALSE;
+		}
+		$email_used = $this->db->where('email', $val)->get('admin_user')->num_rows();
+		if($email_used){
+			$this->form_validation->set_message('_check_email', 'Email telah digunakan. Silahkan gunakan Email lain.');
+			return FALSE;
+		}
+		return TRUE;
+	}
     
 
 }

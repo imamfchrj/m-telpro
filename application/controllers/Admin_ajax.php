@@ -42,8 +42,7 @@ class Admin_ajax extends Auth_Controller {
     }
 	
 	public function mastermenu_update(){
-        
-
+        cekmenu_ajax('mastermenu');
         $this->load->model('admin/mastermenu_m');
         $this->form_validation->set_rules('name', 'Nama Menu', 'trim|required|xss_clean|htmlentities');
         $this->form_validation->set_rules('icon', 'Icon', 'trim|xss_clean|htmlentities');
@@ -75,7 +74,7 @@ class Admin_ajax extends Auth_Controller {
     }
     
 	public function mastermenu_delete(){
-                cekmenu_ajax('mastermenu');
+        cekmenu_ajax('mastermenu');
 
         $this->load->model('admin/mastermenu_m');
         $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
@@ -198,6 +197,90 @@ class Admin_ajax extends Auth_Controller {
             echo json_encode(array(
                 'is_error'=>true,
                 'error_message'=>  "Terjadi kesalahan. Mohon refresh komputer anda."
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
+
+    public function adminlist_insert(){
+        cekmenu_ajax('adminlist');
+        $this->load->model('admin/adminlist_m');
+        $this->form_validation->set_rules('name', 'Nama User Admin', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|htmlentities|callback__check_email');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|htmlentities|min_length[8]|max_length[200]');
+        $this->form_validation->set_rules('role', 'Role Admin', 'trim|required|integer|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'name' => $this->form_validation->set_value('name'),
+                'email' => $this->form_validation->set_value('email'),
+                'password' => $this->form_validation->set_value('password'),
+                'role' => $this->form_validation->set_value('role'),
+            );
+            
+            $data=$this->adminlist_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+	
+	public function adminlist_update(){
+        cekmenu_ajax('adminlist');
+        $this->load->model('admin/adminlist_m');
+        $this->form_validation->set_rules('name', 'Nama User Admin', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|htmlentities|min_length[8]|max_length[200]');
+        $this->form_validation->set_rules('role', 'Role Admin', 'trim|required|integer|xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'name' => $this->form_validation->set_value('name'),
+                'email' => $this->form_validation->set_value('email'),
+                'password' => $this->form_validation->set_value('password'),
+                'role' => $this->form_validation->set_value('role'),
+            );
+            
+            $data=$this->adminlist_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>true,
+
+            'error_message'=>  json_encode($id)
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+    
+	public function adminlist_delete(){
+        cekmenu_ajax('adminlist');
+
+        $this->load->model('admin/adminlist_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->adminlist_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
+                'id'=>$data
             ));
             return;
         }

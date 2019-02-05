@@ -102,6 +102,35 @@ class Admin extends Auth_Controller {
 		$data['menu_user']=$this->adminrole_m->get_menu_user($id);
 		$this->load->view('admin/adminrole_menu',$data);
 	}
+
+
+	public function adminlist()
+	{
+		$data['menu']="adminlist";
+		$this->load->model('admin/adminlist_m');
+		$data['values']=$this->adminlist_m->get_all();
+		$this->load->view('admin/adminlist',$data);
+	}
+	
+	public function adminlist_add($id=0)
+	{
+		$data['menu']="adminlist";
+        if($id){
+            $this->form_validation->set_data(array(
+                'id'    =>  $id
+            ));
+            $this->form_validation->set_rules('id', 'id probono', 'trim|required|xss_clean|numeric|htmlentities');
+
+            if ($this->form_validation->run()) {
+				$this->load->model('admin/adminlist_m');
+                $id=$this->form_validation->set_value('id');
+				$data['values']=$this->adminlist_m->get_by_id($id);
+            }
+        }
+		$this->load->model('admin/adminrole_m');
+		$data['data_roles']=$this->adminrole_m->get_all();
+		$this->load->view('admin/adminlist_add',$data);
+	}
     
     
 

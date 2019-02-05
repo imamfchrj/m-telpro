@@ -7,7 +7,7 @@
             <div class="page-breadcrumb">
                <div class="row">
                   <div class="col-5 align-self-center">
-                     <h4 class="page-title">List Transaksi Mobil</h4>
+                     <h4 class="page-title">Admin List</h4>
                      <div class="d-flex align-items-center">
                      </div>
                   </div>
@@ -18,7 +18,7 @@
                               <li class="breadcrumb-item">
                                  <a href="#"></a>
                               </li>
-                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                              <li class="breadcrumb-item active" aria-current="page">Admin List</li>
                            </ol>
                         </nav>
                      </div>
@@ -44,231 +44,23 @@
                               <table class="table product-overview" id="zero_config">
                                  <thead>
                                     <tr>
-                                       <th>TRX-ID</th>
-                                       <th>Subjek</th>
-                                       <th>Lokasi Deliveri</th>
-                                       <th>Jenis Mobil</th>
-                                       <th>Tahun Mobil</th>
-                                       <th>Warna Mobil</th>
-                                       <th>Transmisi</th>
-                                       <th>Pickup Date</th>
-                                       <th>Return Date</th>
-                                       <th>Jenis Plat</th>
-                                       <th>Branding</th>
-                                       <th style="text-align:center">Catatan</th>
+                                       <th>ID</th>
+                                       <th>Name</th>
+                                       <th>Email</th>
+                                       <th>Role</th>
+                                       <th style="text-align:center">Action</th>
                                     </tr>
                                  </thead>
                                  <tbody>
+                                    <?php foreach($values as $list) {?>
                                     <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
+                                       <td><?=$list->id?></td>
+                                       <td><?=$list->name?></td>
+                                       <td><?=$list->email?></td>
+                                       <td><?=$list->name_role?></td>
+                                       <td style="text-align:center"><a href="<?=base_url()?>admin/adminlist_add/<?=$list->id?>">Edit</a> </td>
                                     </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
-                                    <tr>
-                                       <td>TELPRO-20190120-001</td>
-                                       <td>Penyewaan Mobil A</td>
-                                       <td>Margonda Raya Depok</td>
-                                       <td>Avanza</td>
-                                       <td>2018</td>
-                                       <td>Hitam</td>
-                                       <td>Manual</td>
-                                       <td>24 Januari 2019 09:00</td>
-                                       <td>24 Januari 2020 09:00</td>
-                                       <td>Ganjil</td>
-                                       <td>Ya</td>
-                                       <td width="150px">Kalau bisa di antar ke rumah ya?</td>
-                                    </tr>
+                                    <?php } ?>
                                  </tbody>
                               </table>
                            </div>
@@ -288,6 +80,9 @@
                <!-- End Right sidebar -->
                <!-- ============================================================== -->
             </div>
+            <script>
+                  var lokasitambah=ROOT+'admin/adminlist_add';
+            </script>
 
 <?php
    $this->load->view('admin/layout/footer');
