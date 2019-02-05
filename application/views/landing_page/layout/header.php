@@ -29,7 +29,7 @@
         <script src="assets/js/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class=" wheel-bg2 ">
+<body class=" <?php if(in_array($menu,array('news'))) {?>wheel-bg2 <?php } ?> ">
         <!-- MAIN -->
         <div class="load-wrap">
             <div class="wheel-load">
@@ -47,7 +47,7 @@
                     <div class="col-sm-9 col-xs-12 padd-lr0">
                         <div class="wheel-top-menu clearfix">
                             <div class="wheel-top-menu-info">
-                                <div class="top-menu-item"><a href="<?=base_url()?>"><i class="fa fa-phone"></i><span>(+61) 3214 546789</span></a></div>
+                                <div class="top-menu-item"><a href="<?=base_url()?>"><i class="fa fa-phone"></i><span>(+62) 811 889192</span></a></div>
                                 <div class="top-menu-item"><a href="<?=base_url()?>"><i class="fa fa-envelope"></i><span>contact@market-telpro.com</span></a></div>
                             </div>
                             <div class="wheel-top-menu-log">

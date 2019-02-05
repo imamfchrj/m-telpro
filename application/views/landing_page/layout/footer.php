@@ -97,5 +97,6 @@
         <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap-select.min.js"></script>
         <script type="text/javascript" src="<?=base_url()?>assets/js/index.js"></script>
         <!-- sixth block end -->
+        
     </body>
 </html>
