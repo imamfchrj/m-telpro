@@ -11,7 +11,7 @@ class Admin_ajax extends Auth_Controller {
 	}
 	
 	public function mastermenu_insert(){
-
+        cekmenu_ajax('mastermenu');
         $this->load->model('admin/mastermenu_m');
         $this->form_validation->set_rules('name', 'Nama Menu', 'trim|required|xss_clean|htmlentities');
         $this->form_validation->set_rules('icon', 'Icon', 'trim|xss_clean|htmlentities');
@@ -43,6 +43,7 @@ class Admin_ajax extends Auth_Controller {
     }
 	
 	public function mastermenu_update(){
+        
 
         $this->load->model('admin/mastermenu_m');
         $this->form_validation->set_rules('name', 'Nama Menu', 'trim|required|xss_clean|htmlentities');
@@ -75,6 +76,7 @@ class Admin_ajax extends Auth_Controller {
     }
     
 	public function mastermenu_delete(){
+                cekmenu_ajax('mastermenu');
 
         $this->load->model('admin/mastermenu_m');
         $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
@@ -94,18 +96,83 @@ class Admin_ajax extends Auth_Controller {
         ));
         return;
     }
-    
-	// public function mastermenu_selectall(){
-    //     echo json_encode(array(
-    //         'is_error'=>false,
-    //         'id'=>$data
-    //     ));
-    //     return;
-    // }
 
 
-    
+    public function adminrole_insert(){
+
+        cekmenu_ajax('adminrole');
+
+        $this->load->model('admin/adminrole_m');
+        $this->form_validation->set_rules('role', 'Role Name', 'trim|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'role' => $this->form_validation->set_value('role')
+            );
+            
+            $data=$this->adminrole_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false,
+                'id'=>$value
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
     
 
+    public function adminrole_update(){
+
+        cekmenu_ajax('adminrole');
+
+        $this->load->model('admin/adminrole_m');
+        $this->form_validation->set_rules('role', 'Role Name', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'role' => $this->form_validation->set_value('role')
+            );
+            
+            $data=$this->adminrole_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>false,
+                'id'=>$value
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
+    public function adminrole_delete(){
+
+        cekmenu_ajax('adminrole');
+
+        $this->load->model('admin/adminrole_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->adminrole_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
+                'id'=>$data
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
 
 }

@@ -50,3 +50,7 @@ function cek_checked($val=0){
     }
     return "";
 }
+
+function cekmenu_ajax($menu=0){
+    return true;
+}

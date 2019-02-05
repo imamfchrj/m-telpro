@@ -285,15 +285,15 @@
                            <li class="sidebar-item">
                               <a href="#" class="sidebar-link">
                               <i class="icon-Record"></i>
-                              <span class="hide-menu"> Tambah Admin</span>
-                              </a>
-                              <a href="#" class="sidebar-link">
-                              <i class="icon-Record"></i>
-                              <span class="hide-menu"> List Admin</span>
+                              <span class="hide-menu"> List User Admin</span>
                               </a>
                               <a href="#" class="sidebar-link">
                               <i class="icon-Record"></i>
                               <span class="hide-menu"> Role Admin</span>
+                              </a>
+                              <a href="#" class="sidebar-link">
+                              <i class="icon-Record"></i>
+                              <span class="hide-menu"> Setting Role Menu</span>
                               </a>
                               <a href="<?=base_url()?>admin/mastermenu" class="sidebar-link">
                               <i class="icon-Record"></i>
