@@ -149,7 +149,7 @@
                     levelmenu=2;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/mastermenu_insert',
+                    url: ROOT+'admin_ajax/mastermenu_insert',
                     dataType: 'json',
                     type: 'post',
                     data: {
@@ -187,7 +187,7 @@
                     levelmenu=2;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/mastermenu_update',
+                    url: ROOT+'admin_ajax/mastermenu_update',
                     dataType: 'json',
                     type: 'post',
                     data: {
@@ -219,7 +219,7 @@
                     return;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/mastermenu_delete',
+                    url: ROOT+'admin_ajax/mastermenu_delete',
                     dataType: 'json',
                     type: 'post',
                     data: {

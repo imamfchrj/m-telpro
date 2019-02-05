@@ -96,7 +96,7 @@
             });
             function insert(){
                 $.ajax({
-                    url: ROOT+'/admin_ajax/adminrole_insert',
+                    url: ROOT+'admin_ajax/adminrole_insert',
                     dataType: 'json',
                     type: 'post',
                     data: {
@@ -123,7 +123,7 @@
                     return;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/adminrole_update',
+                    url: ROOT+'admin_ajax/adminrole_update',
                     dataType: 'json',
                     type: 'post',
                     data: {
@@ -151,7 +151,7 @@
                     return;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/adminrole_delete',
+                    url: ROOT+'admin_ajax/adminrole_delete',
                     dataType: 'json',
                     type: 'post',
                     data: {

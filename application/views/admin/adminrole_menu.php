@@ -112,7 +112,7 @@
                     value=1;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/adminrole_menu',
+                    url: ROOT+'admin_ajax/adminrole_menu',
                     dataType: 'json',
                     type: 'post',
                     data: {

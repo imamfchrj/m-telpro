@@ -145,7 +145,7 @@
                     levelmenu=2;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/adminlist_insert',
+                    url: ROOT+'admin_ajax/adminlist_insert',
                     dataType: 'json',
                     type: 'post',
                     data: {
@@ -175,7 +175,7 @@
                     return;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/adminlist_update',
+                    url: ROOT+'admin_ajax/adminlist_update',
                     dataType: 'json',
                     type: 'post',
                     data: {
@@ -207,7 +207,7 @@
                     return;
                 }
                 $.ajax({
-                    url: ROOT+'/admin_ajax/adminlist_delete',
+                    url: ROOT+'admin_ajax/adminlist_delete',
                     dataType: 'json',
                     type: 'post',
                     data: {
