@@ -108,7 +108,6 @@
                             alert_error(data.error_message);
                             return;
                         }
-                        console.log(data);
                         window.location = ROOT+'admin/adminrole';
                     })
                     .always(function(){

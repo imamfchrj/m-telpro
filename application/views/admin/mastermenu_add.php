@@ -130,7 +130,6 @@
 
             <script>
             var id="<?php if($values){echo $values->id;}else{echo '0';}?>";
-            console.log("halo");
             $("#save").click(function(){
                 if(id !=0){
                     update();
@@ -166,7 +165,6 @@
                             alert_error(data.error_message);
                             return;
                         }
-                        console.log(data);
                         window.location = ROOT+'admin/mastermenu';
                     })
                     .always(function(){

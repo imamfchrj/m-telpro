@@ -188,7 +188,26 @@
                      <li class="nav-small-cap">
                         <i class="mdi mdi-dots-horizontal"></i>
                      </li>
+                     <?php $daftar_menu=get_menu(1);?>
+                     <?php foreach($daftar_menu as $list){ ?>
                      <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                        <i class="<?=$list->icon?>"></i>
+                        <span class="hide-menu"><?=$list->name?> </span>
+                        </a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                           <?php foreach($list->sub_menu as $list_sub){?>
+                              <li class="sidebar-item">
+                                 <a href="<?=base_url()?>admin/<?=$list_sub->path?>" class="sidebar-link">
+                                 <i class="icon-Record"></i>
+                                 <span class="hide-menu"> <?=$list_sub->name?> </span>
+                                 </a>
+                              </li>
+                           <?php }?>
+                        </ul>
+                     </li>
+                     <?php }?>
+                     <!-- <li class="sidebar-item">
                         <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
                         <i class="icon-Car-Wheel"></i>
                         <span class="hide-menu">Dashboards </span>
@@ -201,8 +220,8 @@
                               </a>
                            </li>
                         </ul>
-                     </li>
-                     <li class="sidebar-item">
+                     </li> -->
+                     <!-- <li class="sidebar-item">
                         <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
                         <i class="icon-Receipt-4"></i>
                         <span class="hide-menu">Sewa Mobil </span>
@@ -323,7 +342,7 @@
                               </a>
                            </li>
                         </ul>
-                     </li>
+                     </li> -->
                      <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="authentication-login1.html
                            " aria-expanded="false">

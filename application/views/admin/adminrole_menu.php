@@ -107,7 +107,6 @@
 
             <script>
             function settingmenu($id_menu){
-                console.log($id_menu);
                 var value=0;
                 if($("#settingmenu"+$id_menu+":checked").val()){
                     value=1;

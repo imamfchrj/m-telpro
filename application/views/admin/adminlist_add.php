@@ -122,7 +122,6 @@
 
             <script>
             var id="<?php if($values){echo $values->id;}else{echo '0';}?>";
-            console.log("halo");
             $("#save").click(function(){
                 if($('#password').val() != $('#confirm-password').val()){
                     alert_error('Konfirmasi Password Salah');
@@ -161,7 +160,6 @@
                             alert_error(data.error_message);
                             return;
                         }
-                        console.log(data);
                         window.location = ROOT+'admin/adminlist';
                     })
                     .always(function(){

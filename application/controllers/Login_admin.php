@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Clients_nl extends All_Controller {
+class Login_admin extends CI_Controller {
     
     
 	function __construct()
@@ -14,6 +14,7 @@ class Clients_nl extends All_Controller {
 		$data['menu']="home";
 		$this->load->view('client/login',$data);
     }
+
 
     public function ajax_login(){
         $this->form_validation->set_rules('user_set', "user value", 'required|trim|xss_clean|callback__check_bool');

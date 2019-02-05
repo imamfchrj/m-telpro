@@ -97,7 +97,11 @@ class All_Controller extends CI_Controller
             return true;
         }
         return false;
-    }
+	}
+	
+
+
+    
 
 
 }

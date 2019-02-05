@@ -39,3 +39,17 @@ function cek_checked($val=0){
 function cekmenu_ajax($menu=0){
     return true;
 }
+
+
+function get_menu($role_id=1){
+    $CI =& get_instance();
+    $CI->load->model('admin/mastermenu_m');
+    $data=$CI->mastermenu_m->get_master_menu($role_id);
+    $i=0;
+    foreach($data as $list){
+        $sub_menu=$CI->mastermenu_m->get_sub_menu($role_id,$list->id);
+        $data[$i]->sub_menu=$sub_menu;
+        $i++;
+    }
+    return $data;
+}
