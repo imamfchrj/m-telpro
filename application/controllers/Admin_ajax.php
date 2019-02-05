@@ -30,8 +30,7 @@ class Admin_ajax extends Auth_Controller {
             
             $data=$this->mastermenu_m->set($value);
             echo json_encode(array(
-                'is_error'=>false,
-                'id'=>$value
+                'is_error'=>false
             ));
             return;
         }
@@ -112,8 +111,7 @@ class Admin_ajax extends Auth_Controller {
             
             $data=$this->adminrole_m->set($value);
             echo json_encode(array(
-                'is_error'=>false,
-                'id'=>$value
+                'is_error'=>false
             ));
             return;
         }
@@ -140,8 +138,7 @@ class Admin_ajax extends Auth_Controller {
             
             $data=$this->adminrole_m->update_value_by_id($id,$value);
             echo json_encode(array(
-                'is_error'=>false,
-                'id'=>$value
+                'is_error'=>false
             ));
             return;
         }
@@ -165,6 +162,42 @@ class Admin_ajax extends Auth_Controller {
             echo json_encode(array(
                 'is_error'=>false,
                 'id'=>$data
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
+
+    public function adminrole_menu(){
+
+        cekmenu_ajax('adminrole');
+
+        $this->load->model('admin/adminrole_m');
+        $this->form_validation->set_rules('idmenu', 'Value', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('value', 'Value', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'User Admin', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'role' => $this->form_validation->set_value('idmenu'),
+                'value' => $this->form_validation->set_value('value')
+            );
+            $id=$this->form_validation->set_value('id');
+            $data=$this->adminrole_m->set_menu($value,$id);
+            if($data){
+                echo json_encode(array(
+                    'is_error'=>false
+                ));
+                return;
+            }
+            echo json_encode(array(
+                'is_error'=>true,
+                'error_message'=>  "Terjadi kesalahan. Mohon refresh komputer anda."
             ));
             return;
         }

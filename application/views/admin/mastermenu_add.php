@@ -7,7 +7,7 @@
             <div class="page-breadcrumb">
                <div class="row">
                   <div class="col-5 align-self-center">
-                     <h4 class="page-name">Admin Menu</h4>
+                     <h4 class="page-name">Master Menu</h4>
                      <div class="d-flex align-items-center">
                      </div>
                   </div>

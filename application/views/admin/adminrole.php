@@ -7,7 +7,7 @@
             <div class="page-breadcrumb">
                <div class="row">
                   <div class="col-5 align-self-center">
-                     <h4 class="page-title">List Transaksi Mobil</h4>
+                     <h4 class="page-title">Admin Role</h4>
                      <div class="d-flex align-items-center">
                      </div>
                   </div>
@@ -18,7 +18,7 @@
                               <li class="breadcrumb-item">
                                  <a href="#"></a>
                               </li>
-                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                              <li class="breadcrumb-item active" aria-current="page">admin Role</li>
                            </ol>
                         </nav>
                      </div>
@@ -54,7 +54,7 @@
                                     <tr>
                                        <td><?=$list->id?></td>
                                        <td><?=$list->role?></td>
-                                       <td style="text-align:center"><a href="<?=base_url()?>admin/adminrole_add/<?=$list->id?>">Edit</a></td>
+                                       <td style="text-align:center"><a href="<?=base_url()?>admin/adminrole_add/<?=$list->id?>">Edit</a> | <a href="<?=base_url()?>admin/adminrole_menu/<?=$list->id?>">Add Menu</a> </td>
                                     </tr>
                                     <?php } ?>
                                  </tbody>

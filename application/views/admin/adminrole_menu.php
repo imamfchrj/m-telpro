@@ -7,7 +7,7 @@
             <div class="page-breadcrumb">
                <div class="row">
                   <div class="col-5 align-self-center">
-                     <h4 class="page-name">Admin Role</h4>
+                     <h4 class="page-name">Admin Menu</h4>
                      <div class="d-flex align-items-center">
                      </div>
                   </div>
@@ -18,7 +18,7 @@
                               <li class="breadcrumb-item">
                                  <a href="#"></a>
                               </li>
-                              <li class="breadcrumb-item active" aria-current="page">Admin Role</li>
+                              <li class="breadcrumb-item active" aria-current="page">Master Menu</li>
                            </ol>
                         </nav>
                      </div>
@@ -39,32 +39,55 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header bg-info">
-                                <h4 class="mb-0 text-white">Tambahkan Menu</h4>
+                                <h4 class="mb-0 text-white">Setting Menu</h4>
                             </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Master Menu</h4>
+                                    <h4 class="card-title">Setting Menu</h4>
                                 </div>
                                 <hr>
                                 <div class="form-body">
                                     <div class="card-body">
                                         <div class="row pt-3">
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="control-label">Role</label>
-                                                    <input type="text" id="role" class="form-control" value="<?=$values->role?>" placeholder="">
+                                                    <input type="text" id="role" class="form-control" value="<?=$values->role?>" placeholder="" disabled>
                                                     <small class="form-control-feedback name-text"> </small> </div>
                                             </div>
                                             <!--/span-->
                                         </div>
-                                        <!--/row-->
+                                        <div class="row pt-3">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Menu</label>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+
+                                        <div class="row pt-3">
+                                        <?php foreach($menu as $list){ ?>
+                                            
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <fieldset class="checkbox">
+                                                        <label>
+                                        <input type="checkbox" <?php if(in_array($list->id,$menu_user)) { ?>checked<?php }?> id="settingmenu<?=$list->id?>" onchange="settingmenu('<?=$list->id?>')"> <?=$list->name?>
+                                                        </label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+                                        <?php } ?>
+                                        </div>
                                     </div>
-                                    <hr>
-                                    <div class="form-actions">
+                                    <!-- <hr> -->
+                                    <!-- <div class="form-actions">
                                         <div class="card-body">
                                             <button type="" id="save" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
                                             <button type="" id="hapus" class="btn btn-dark">Hapus</button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                         </div>
                     </div>
@@ -83,24 +106,20 @@
             </div>
 
             <script>
-            var id="<?php if($values){echo $values->id;}else{echo '0';}?>";
-            $("#save").click(function(){
-                if(id !=0){
-                    update();
-                }else{
-                    insert();
+            function settingmenu($id_menu){
+                console.log($id_menu);
+                var value=0;
+                if($("#settingmenu"+$id_menu+":checked").val()){
+                    value=1;
                 }
-            });
-            $("#hapus").click(function(){
-                delete_();
-            });
-            function insert(){
                 $.ajax({
-                    url: ROOT+'/admin_ajax/adminrole_insert',
+                    url: ROOT+'/admin_ajax/adminrole_menu',
                     dataType: 'json',
                     type: 'post',
                     data: {
-                        role: $('#role').val()
+                        idmenu: $id_menu,
+                        value: value,
+                        id:<?=$values->id?>
                     }
                 })
                     .done(function(data) {
@@ -108,8 +127,6 @@
                             alert_error(data.error_message);
                             return;
                         }
-                        console.log(data);
-                        window.location = ROOT+'admin/adminrole';
                     })
                     .always(function(){
 
@@ -118,62 +135,6 @@
                         alert_error("Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
                     });
             }
-            function update(){
-                if(id==0){
-                    alert_error("ID tidak boleh kosong");
-                    return;
-                }
-                $.ajax({
-                    url: ROOT+'/admin_ajax/adminrole_update',
-                    dataType: 'json',
-                    type: 'post',
-                    data: {
-                        role: $('#role').val(),
-                        id:id
-                    }
-                })
-                    .done(function(data) {
-                        if(data.is_error){
-                            alert_error(data.error_message);
-                            return;
-                        }
-                        window.location = ROOT+'admin/adminrole';
-                    })
-                    .always(function(){
-
-                    })
-                    .fail(function(data){
-                        alert_error("Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
-                        });
-            }
-            function delete_(){
-                if(id==0){
-                    alert_error("ID tidak boleh kosong");
-                    return;
-                }
-                $.ajax({
-                    url: ROOT+'/admin_ajax/adminrole_delete',
-                    dataType: 'json',
-                    type: 'post',
-                    data: {
-                        id:id
-                    }
-                })
-                    .done(function(data) {
-                        if(data.is_error){
-                            alert_error(data.error_message);
-                            return;
-                        }
-                        window.location = ROOT+'admin/adminrole';
-                    })
-                    .always(function(){
-
-                    })
-                    .fail(function(data){
-                        alert_error("Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
-                        });
-            }
-            
             </script>
 
 <?php
