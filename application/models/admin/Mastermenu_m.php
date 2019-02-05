@@ -1,27 +1,27 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class Master_berita_m extends CI_Model
+class Mastermenu_m extends CI_Model
 {
     public function __construct()
     {
         parent::__construct();
     }
 
-    private $table = 'berita';
+    private $table = 'admin_menu';
+    
 
-
-    function set($array){
+	function set($array){
         $this->db->set($array);
         $this->db->insert($this->table);
-        return $this->db->insert_id();
+		return $this->db->insert_id();
     }
-
-    function update_value_by_id($id,$value){
-        $data = $value;
+    
+	function update_value_by_id($id,$value){
+		$data = $value;
         $this->db->where('id', $id);
-        $data = $this->db->update($this->table, $data);
-        return $data;
+        $data = $this->db->update($this->table, $data); 
+		return $data;
     }
 
     function get_by_id($id){
@@ -32,8 +32,17 @@ class Master_berita_m extends CI_Model
         }
         return false;
     }
-
+    
     function get_all(){
+        $query=$this->db->get($this->table);
+        if($query){
+            return $query->result();
+        }
+        return false;
+    }
+    
+    function get_main_menu(){
+        $this->db->where('level', 1);
         $query=$this->db->get($this->table);
         if($query){
             return $query->result();

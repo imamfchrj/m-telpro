@@ -8,7 +8,27 @@
 /****************************************
  *       Basic Table                   *
  ****************************************/
-$('#zero_config').DataTable();
+$('#zero_config').DataTable(
+
+    {
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                text: 'Tambah data',
+                className: 'btn btn-rounded  btn-info',
+                action: function ( e, dt, node, config ) {
+                    window.location.href = lokasitambah; 
+                    this.disable(); // disable button
+                }
+            },
+            { extend: 'print', className: 'btn waves-effect waves-light btn-rounded btn-outline-primary' },
+            { extend: 'copy', className: 'btn waves-effect waves-light btn-rounded btn-outline-primary' },
+            { extend: 'csv', className: 'btn waves-effect waves-light btn-rounded btn-outline-primary' },
+            { extend: 'excel', className: 'btn waves-effect waves-light btn-rounded btn-outline-primary' },
+            { extend: 'pdf', className: 'btn waves-effect waves-light btn-rounded btn-outline-primary' },
+            ]
+    }
+);
 
 /****************************************
  *       Default Order Table           *

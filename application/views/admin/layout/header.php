@@ -22,6 +22,11 @@
       <![endif]-->
    </head>
    <body>
+      <script src="<?=base_url()?>assets/admin/assets/libs/jquery/dist/jquery.min.js"></script>
+      <script src="<?=base_url()?>assets/js/alert.js"></script>
+      <script>
+         var ROOT = "<?=base_url()?>";
+      </script>
       <!-- ============================================================== -->
       <!-- Preloader - style you can find in spinners.css -->
       <!-- ============================================================== -->
@@ -285,6 +290,14 @@
                               <a href="#" class="sidebar-link">
                               <i class="icon-Record"></i>
                               <span class="hide-menu"> List Admin</span>
+                              </a>
+                              <a href="#" class="sidebar-link">
+                              <i class="icon-Record"></i>
+                              <span class="hide-menu"> Role Admin</span>
+                              </a>
+                              <a href="<?=base_url()?>admin/mastermenu" class="sidebar-link">
+                              <i class="icon-Record"></i>
+                              <span class="hide-menu"> Master Menu</span>
                               </a>
                            </li>
                         </ul>

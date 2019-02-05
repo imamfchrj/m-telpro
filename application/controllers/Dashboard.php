@@ -63,8 +63,13 @@ class Dashboard extends All_Controller {
 
 	public function admin_login(){
 		$data['menu']="home";
-
 		$this->load->view('admin/login',$data);
+	}
+
+	public function default_form(){
+
+		$data['menu']="home";
+		$this->load->view('admin/form_default',$data);
 	}
 
 
