@@ -604,4 +604,236 @@ class Admin_ajax extends Auth_Controller {
         return;
     }
 
+
+	public function mastercarcategory_insert(){
+        cekmenu_ajax('mastercarcategory');
+        $this->load->model('admin/mastercarcategory_m');
+        $this->form_validation->set_rules('name', 'Nama Perusahaan', 'trim|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'name' => $this->form_validation->set_value('name')
+            );
+            
+            $data=$this->mastercarcategory_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+	
+	public function mastercarcategory_update(){
+        cekmenu_ajax('mastercarcategory');
+        $this->load->model('admin/mastercarcategory_m');
+        $this->form_validation->set_rules('name', 'Nama Perusahaan', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'name' => $this->form_validation->set_value('name')
+            );
+            
+            $data=$this->mastercarcategory_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+    
+	public function mastercarcategory_delete(){
+        cekmenu_ajax('mastercarcategory');
+
+        $this->load->model('admin/mastercarcategory_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->mastercarcategory_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
+
+	public function mastercarbrand_insert(){
+        cekmenu_ajax('mastercarbrand');
+        $this->load->model('admin/mastercarbrand_m');
+        $this->form_validation->set_rules('name', 'Nama Perusahaan', 'trim|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'name' => $this->form_validation->set_value('name')
+            );
+            
+            $data=$this->mastercarbrand_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+	
+	public function mastercarbrand_update(){
+        cekmenu_ajax('mastercarbrand');
+        $this->load->model('admin/mastercarbrand_m');
+        $this->form_validation->set_rules('name', 'Nama Perusahaan', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'name' => $this->form_validation->set_value('name')
+            );
+            
+            $data=$this->mastercarbrand_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+    
+	public function mastercarbrand_delete(){
+        cekmenu_ajax('mastercarbrand');
+
+        $this->load->model('admin/mastercarbrand_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->mastercarbrand_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
+
+
+
+	public function mastercarseries_insert(){
+        cekmenu_ajax('mastercarseries');
+        $this->load->model('admin/mastercarseries_m');
+        $this->form_validation->set_rules('name_series', 'Nama Series', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('category_car_id', 'Kategori', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('brand_id', 'Brand', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('seat', 'Seat', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('is_manual', 'Manual/Matic', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('is_airbags', 'Airbags', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('is_ac', 'AC', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'name_series' => $this->form_validation->set_value('name_series'),
+                'category_car_id' => $this->form_validation->set_value('category_car_id'),
+                'brand_id' => $this->form_validation->set_value('brand_id'),
+                'seat' => $this->form_validation->set_value('seat'),
+                'is_manual' => $this->form_validation->set_value('is_manual'),
+                'is_airbags' => $this->form_validation->set_value('is_airbags'),
+                'is_ac' => $this->form_validation->set_value('is_ac')
+            );
+            
+            $data=$this->mastercarseries_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+	
+	public function mastercarseries_update(){
+        cekmenu_ajax('mastercarseries');
+        $this->load->model('admin/mastercarseries_m');
+        $this->form_validation->set_rules('name_series', 'Nama Series', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('category_car_id', 'Kategori', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('brand_id', 'Brand', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('seat', 'Seat', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('is_manual', 'Manual/Matic', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('is_airbags', 'Airbags', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('is_ac', 'AC', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'name_series' => $this->form_validation->set_value('name_series'),
+                'category_car_id' => $this->form_validation->set_value('category_car_id'),
+                'brand_id' => $this->form_validation->set_value('brand_id'),
+                'seat' => $this->form_validation->set_value('seat'),
+                'is_manual' => $this->form_validation->set_value('is_manual'),
+                'is_airbags' => $this->form_validation->set_value('is_airbags'),
+                'is_ac' => $this->form_validation->set_value('is_ac')
+            );
+            
+            $data=$this->mastercarseries_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+    
+	public function mastercarseries_delete(){
+        cekmenu_ajax('mastercarseries');
+
+        $this->load->model('admin/mastercarseries_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->mastercarseries_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
 }

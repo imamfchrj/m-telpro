@@ -262,6 +262,82 @@ class Admin extends Auth_Controller {
 		$this->load->view('admin/mastercostumer_add',$data);
 	}
 
+	public function mastercarcategory(){
+		$data['menu']="mastercarcategory";
+		$this->load->model('admin/mastercarcategory_m');
+		$data['values']=$this->mastercarcategory_m->get_all();
+		$this->load->view('admin/mastercarcategory',$data);
+	}
+
+	public function mastercarcategory_add($id=0){
+		$data['menu']="mastercarcategory";
+        if($id){
+            $this->form_validation->set_data(array(
+                'id'    =>  $id
+            ));
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
+
+            if ($this->form_validation->run()) {
+				$this->load->model('admin/mastercarcategory_m');
+                $id=$this->form_validation->set_value('id');
+				$data['values']=$this->mastercarcategory_m->get_by_id($id);
+            }
+        }
+		$this->load->view('admin/mastercarcategory_add',$data);
+	}
+
+	public function mastercarbrand(){
+		$data['menu']="mastercarbrand";
+		$this->load->model('admin/mastercarbrand_m');
+		$data['values']=$this->mastercarbrand_m->get_all();
+		$this->load->view('admin/mastercarbrand',$data);
+	}
+
+	public function mastercarbrand_add($id=0){
+		$data['menu']="mastercarbrand";
+        if($id){
+            $this->form_validation->set_data(array(
+                'id'    =>  $id
+            ));
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
+
+            if ($this->form_validation->run()) {
+				$this->load->model('admin/mastercarbrand_m');
+                $id=$this->form_validation->set_value('id');
+				$data['values']=$this->mastercarbrand_m->get_by_id($id);
+            }
+        }
+		$this->load->view('admin/mastercarbrand_add',$data);
+	}
+
+	public function mastercarseries(){
+		$data['menu']="mastercarseries";
+		$this->load->model('admin/mastercarseries_m');
+		$data['values']=$this->mastercarseries_m->get_all();
+		$this->load->view('admin/mastercarseries',$data);
+	}
+
+	public function mastercarseries_add($id=0){
+		$data['menu']="mastercarseries";
+        if($id){
+            $this->form_validation->set_data(array(
+                'id'    =>  $id
+            ));
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
+
+            if ($this->form_validation->run()) {
+				$this->load->model('admin/mastercarseries_m');
+                $id=$this->form_validation->set_value('id');
+				$data['values']=$this->mastercarseries_m->get_by_id($id);
+            }
+        }
+		$this->load->model('admin/mastercarbrand_m');
+		$data['data_brand']=$this->mastercarbrand_m->get_all();
+		$this->load->model('admin/mastercarcategory_m');
+		$data['data_category']=$this->mastercarcategory_m->get_all();
+		$this->load->view('admin/mastercarseries_add',$data);
+	}
+
 
 	
 
