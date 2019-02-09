@@ -210,4 +210,30 @@ class Admin extends Auth_Controller {
 		$this->load->view('admin/kategoriberita_add',$data);
 	}
 
+
+
+	public function areaservice(){
+		$data['menu']="areaservice";
+		$this->load->model('admin/areaservice_m');
+		$data['values']=$this->areaservice_m->get_all();
+		$this->load->view('admin/areaservice',$data);
+	}
+
+	public function areaservice_add($id=0){
+		$data['menu']="areaservice";
+        if($id){
+            $this->form_validation->set_data(array(
+                'id'    =>  $id
+            ));
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
+
+            if ($this->form_validation->run()) {
+				$this->load->model('admin/areaservice_m');
+                $id=$this->form_validation->set_value('id');
+				$data['values']=$this->areaservice_m->get_by_id($id);
+            }
+        }
+		$this->load->view('admin/areaservice_add',$data);
+	}
+
 }

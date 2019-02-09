@@ -74,6 +74,16 @@ class Auth_Controller extends CI_Controller
 		}
 		return TRUE;
 	}
+
+	function _check_decimal($val){
+		if (is_numeric( $val )) 
+		{
+		  return TRUE;
+		} 
+		$this->form_validation->set_message('_check_decimal', 'Format latlong salah');
+		return FALSE;
+		
+	}
     
 
 }

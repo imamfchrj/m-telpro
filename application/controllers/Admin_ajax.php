@@ -457,4 +457,84 @@ class Admin_ajax extends Auth_Controller {
         return;
     }
 
+
+
+	public function areaservice_insert(){
+        cekmenu_ajax('areaservice');
+        $this->load->model('admin/areaservice_m');
+        $this->form_validation->set_rules('name', 'Nama Area', 'trim|required|xss_clean|htmlentities');
+
+        $this->form_validation->set_rules('map_lat', 'Langitude', 'trim|required|xss_clean|htmlentities|callback__check_decimal');
+        $this->form_validation->set_rules('map_long', 'Longitude', 'trim|required|xss_clean|htmlentities|callback__check_decimal');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'name' => $this->form_validation->set_value('name'),
+                'map_lat' => $this->form_validation->set_value('map_lat'),
+                'map_long' => $this->form_validation->set_value('map_long'),
+            );
+            
+            $data=$this->areaservice_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+	
+	public function areaservice_update(){
+        cekmenu_ajax('areaservice');
+        $this->load->model('admin/areaservice_m');
+        $this->form_validation->set_rules('name', 'Nama Area', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('map_lat', 'Langitude', 'trim|required|xss_clean|htmlentities|callback__check_decimal');
+        $this->form_validation->set_rules('map_long', 'Longitude', 'trim|required|xss_clean|htmlentities|callback__check_decimal');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'name' => $this->form_validation->set_value('name'),
+                'map_lat' => $this->form_validation->set_value('map_lat'),
+                'map_long' => $this->form_validation->set_value('map_long'),
+            );
+            
+            $data=$this->areaservice_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+    
+	public function areaservice_delete(){
+        cekmenu_ajax('areaservice');
+
+        $this->load->model('admin/areaservice_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->areaservice_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
+                'id'=>$data
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
 }
