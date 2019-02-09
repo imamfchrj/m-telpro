@@ -140,11 +140,29 @@ class Admin extends Auth_Controller {
 
 	public function listberita(){
 		$data['menu']="listberita";
+
+		$this->load->model('admin/listberita_m');
+		$data['values']=$this->listberita_m->get_all();
 		$this->load->view('admin/listberita',$data);
 	}
 
-	public function listberita_add(){
+	public function listberita_add($id=0){
 		$data['menu']="listberita";
+		$this->load->model('admin/listberita_m');
+        if($id){
+            $this->form_validation->set_data(array(
+                'id'    =>  $id
+            ));
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
+
+            if ($this->form_validation->run()) {
+				$this->load->model('admin/listberita_m');
+                $id=$this->form_validation->set_value('id');
+				$data['values']=$this->listberita_m->get_by_id($id);
+			}
+        }
+		$this->load->model('admin/kategoriberita_m');
+		$data['kategoriberita']=$this->kategoriberita_m->get_all();
 		$this->load->view('admin/listberita_add',$data);
 	}
 
@@ -163,7 +181,7 @@ class Admin extends Auth_Controller {
 		}
 		$data["uploaded"]=1;
 		$data["fileName"]=$data["filename"];
-		$data["url"]=base_url().UPLOAD_PATH.$data["filename"];
+		$data["url"]=base_url().UPLOAD_PATH_OUT.$data["filename"];
 		echo json_encode($data);
 		return;
 	}

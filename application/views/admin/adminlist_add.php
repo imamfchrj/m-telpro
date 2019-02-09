@@ -192,7 +192,7 @@
                             alert_error(data.error_message);
                             return;
                         }
-                        // window.location = ROOT+'admin/adminlist';
+                        window.location = ROOT+'admin/adminlist';
                     })
                     .always(function(){
 

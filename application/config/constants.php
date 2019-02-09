@@ -89,4 +89,5 @@ define('EXT', '.php');
 define('DEFAULT_PAGE_USER','laporkan-masalah-hukum');
 define('DEFAULT_PAGE_ADVOKAT','users/caradaftar');
 define('UPLOAD_PATH','/assets/img/');
+define('UPLOAD_PATH_OUT','assets/img/');
 

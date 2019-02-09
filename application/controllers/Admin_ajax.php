@@ -362,4 +362,99 @@ class Admin_ajax extends Auth_Controller {
         return;
     }
 
+
+
+	public function listberita_insert(){
+        cekmenu_ajax('listberita');
+        $this->load->model('admin/listberita_m');
+        $this->form_validation->set_rules('title', 'Judul Artikel', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('thumbnail', 'Thumbnail', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('writer', 'Penulis', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('category_id', 'Kategori', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('is_publish', 'Publish', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('tag', 'Tag', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('news_text', 'Text', 'trim|required|xss_clean|min_length[100]');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'title' => $this->form_validation->set_value('title'),
+                'thumbnail' => $this->form_validation->set_value('thumbnail'),
+                'writer' => $this->form_validation->set_value('writer'),
+                'category_id' => $this->form_validation->set_value('category_id'),
+                'is_publish' => $this->form_validation->set_value('is_publish'),
+                'tag' => $this->form_validation->set_value('tag'),
+                'news_text' => $this->form_validation->set_value('news_text'),
+            );
+            
+            $data=$this->listberita_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+	
+	public function listberita_update(){
+        cekmenu_ajax('listberita');
+        $this->load->model('admin/listberita_m');
+        $this->form_validation->set_rules('title', 'Judul Artikel', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('thumbnail', 'Thumbnail', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('writer', 'Penulis', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('category_id', 'Kategori', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('is_publish', 'Publish', 'trim|integer|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('tag', 'Tag', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('news_text', 'Text', 'trim|required|xss_clean|min_length[100]');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'title' => $this->form_validation->set_value('title'),
+                'thumbnail' => $this->form_validation->set_value('thumbnail'),
+                'writer' => $this->form_validation->set_value('writer'),
+                'category_id' => $this->form_validation->set_value('category_id'),
+                'is_publish' => $this->form_validation->set_value('is_publish'),
+                'tag' => $this->form_validation->set_value('tag'),
+                'news_text' => $this->form_validation->set_value('news_text'),
+            );
+            
+            $data=$this->listberita_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+    
+	public function listberita_delete(){
+        cekmenu_ajax('listberita');
+
+        $this->load->model('admin/listberita_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->listberita_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
+                'id'=>$data
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
 }
