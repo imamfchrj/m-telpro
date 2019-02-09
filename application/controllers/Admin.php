@@ -23,10 +23,6 @@ class Admin extends Auth_Controller {
 		$this->load->view('admin/calculator',$data);
 	}
 	
-
-
-	
-	
 	public function mastermenu()
 	{
 		$data['menu']="mastermenu";
@@ -43,7 +39,7 @@ class Admin extends Auth_Controller {
             $this->form_validation->set_data(array(
                 'id'    =>  $id
             ));
-            $this->form_validation->set_rules('id', 'id probono', 'trim|required|xss_clean|numeric|htmlentities');
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
 
             if ($this->form_validation->run()) {
                 $id=$this->form_validation->set_value('id');
@@ -69,7 +65,7 @@ class Admin extends Auth_Controller {
             $this->form_validation->set_data(array(
                 'id'    =>  $id
             ));
-            $this->form_validation->set_rules('id', 'id probono', 'trim|required|xss_clean|numeric|htmlentities');
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
 
             if ($this->form_validation->run()) {
 				$this->load->model('admin/adminrole_m');
@@ -88,7 +84,7 @@ class Admin extends Auth_Controller {
             $this->form_validation->set_data(array(
                 'id'    =>  $id
             ));
-            $this->form_validation->set_rules('id', 'id probono', 'trim|required|xss_clean|numeric|htmlentities');
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
 
             if ($this->form_validation->run()) {
                 $id=$this->form_validation->set_value('id');
@@ -119,7 +115,7 @@ class Admin extends Auth_Controller {
             $this->form_validation->set_data(array(
                 'id'    =>  $id
             ));
-            $this->form_validation->set_rules('id', 'id probono', 'trim|required|xss_clean|numeric|htmlentities');
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
 
             if ($this->form_validation->run()) {
 				$this->load->model('admin/adminlist_m');
@@ -131,8 +127,69 @@ class Admin extends Auth_Controller {
 		$data['data_roles']=$this->adminrole_m->get_all();
 		$this->load->view('admin/adminlist_add',$data);
 	}
-    
-    
 
+	public function listuser(){
+		$data['menu']="listuser";
+		// file:///Applications/XAMPP/xamppfiles/htdocs/admin/html/dark/app-contacts.html
+	}
+
+	public function listuser_add(){
+		$data['menu']="listuser";
+		// file:///Applications/XAMPP/xamppfiles/htdocs/admin/html/dark/app-contacts.html
+	}
+
+	public function listberita(){
+		$data['menu']="listberita";
+		$this->load->view('admin/listberita',$data);
+	}
+
+	public function listberita_add(){
+		$data['menu']="listberita";
+		$this->load->view('admin/listberita_add',$data);
+	}
+
+
+	public function upload_ck(){
+		$data['menu']="listberita";
+		$this->load->helper("costum_upload");
+		$data=upload_image("upload");
+
+		if($data->is_error){
+			$data["uploaded"]=0;
+			$data["fileName"]="";
+			$data["url"]="";
+			$data["error"]=array("message"=>$data->error);
+			return "";
+		}
+		$data["uploaded"]=1;
+		$data["fileName"]=$data["filename"];
+		$data["url"]=base_url().UPLOAD_PATH.$data["filename"];
+		echo json_encode($data);
+		return;
+	}
+
+	public function kategoriberita(){
+		$data['menu']="kategoriberita";
+		$this->load->model('admin/kategoriberita_m');
+		$data['values']=$this->kategoriberita_m->get_all();
+		$this->load->view('admin/kategoriberita',$data);
+	}
+
+	public function kategoriberita_add($id=0){
+		$data['menu']="kategoriberita";
+        if($id){
+            $this->form_validation->set_data(array(
+                'id'    =>  $id
+            ));
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
+
+            if ($this->form_validation->run()) {
+				$this->load->model('admin/kategoriberita_m');
+                $id=$this->form_validation->set_value('id');
+				$data['values']=$this->kategoriberita_m->get_by_id($id);
+            }
+        }
+		$this->load->view('admin/kategoriberita_add',$data);
+	}
 
 }

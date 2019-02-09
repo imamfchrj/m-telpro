@@ -22,3 +22,4 @@ application/logs/*
 *.DS_Store
 application/env.php
 application/env.php
+assets/img/*

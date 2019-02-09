@@ -291,4 +291,75 @@ class Admin_ajax extends Auth_Controller {
         return;
     }
 
+
+
+	public function kategoriberita_insert(){
+        cekmenu_ajax('kategoriberita');
+        $this->load->model('admin/kategoriberita_m');
+        $this->form_validation->set_rules('category_name', 'Nama Kategori', 'trim|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'category_name' => $this->form_validation->set_value('category_name')
+            );
+            
+            $data=$this->kategoriberita_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+	
+	public function kategoriberita_update(){
+        cekmenu_ajax('kategoriberita');
+        $this->load->model('admin/kategoriberita_m');
+        $this->form_validation->set_rules('category_name', 'Nama Kategori', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'category_name' => $this->form_validation->set_value('category_name')
+            );
+            
+            $data=$this->kategoriberita_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+    
+	public function kategoriberita_delete(){
+        cekmenu_ajax('kategoriberita');
+
+        $this->load->model('admin/kategoriberita_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->kategoriberita_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
+                'id'=>$data
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
 }
