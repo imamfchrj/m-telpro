@@ -84,7 +84,6 @@ class Admin_ajax extends Auth_Controller {
             $data=$this->mastermenu_m->delete_by_id($id);
             echo json_encode(array(
                 'is_error'=>false,
-                'id'=>$data
             ));
             return;
         }
@@ -160,7 +159,6 @@ class Admin_ajax extends Auth_Controller {
             $data=$this->adminrole_m->delete_by_id($id);
             echo json_encode(array(
                 'is_error'=>false,
-                'id'=>$data
             ));
             return;
         }
@@ -280,7 +278,6 @@ class Admin_ajax extends Auth_Controller {
             $data=$this->adminlist_m->delete_by_id($id);
             echo json_encode(array(
                 'is_error'=>false,
-                'id'=>$data
             ));
             return;
         }
@@ -351,7 +348,6 @@ class Admin_ajax extends Auth_Controller {
             $data=$this->kategoriberita_m->delete_by_id($id);
             echo json_encode(array(
                 'is_error'=>false,
-                'id'=>$data
             ));
             return;
         }
@@ -446,7 +442,6 @@ class Admin_ajax extends Auth_Controller {
             $data=$this->listberita_m->delete_by_id($id);
             echo json_encode(array(
                 'is_error'=>false,
-                'id'=>$data
             ));
             return;
         }
@@ -526,7 +521,79 @@ class Admin_ajax extends Auth_Controller {
             $data=$this->areaservice_m->delete_by_id($id);
             echo json_encode(array(
                 'is_error'=>false,
-                'id'=>$data
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+
+
+	public function mastercostumer_insert(){
+        cekmenu_ajax('mastercostumer');
+        $this->load->model('admin/mastercostumer_m');
+        $this->form_validation->set_rules('name', 'Nama Perusahaan', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('image', 'Gambar Perusahaan', 'trim|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+
+            $value=array(
+                'name' => $this->form_validation->set_value('name'),
+                'image' => $this->form_validation->set_value('image')
+            );
+            
+            $data=$this->mastercostumer_m->set($value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+	
+	public function mastercostumer_update(){
+        cekmenu_ajax('mastercostumer');
+        $this->load->model('admin/mastercostumer_m');
+        $this->form_validation->set_rules('name', 'Nama Perusahaan', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('image', 'Gambar Perusahaan', 'trim|required|xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            $value=array(
+                'name' => $this->form_validation->set_value('name'),
+                'image' => $this->form_validation->set_value('image')
+            );
+            
+            $data=$this->mastercostumer_m->update_value_by_id($id,$value);
+            echo json_encode(array(
+                'is_error'=>false
+            ));
+            return;
+        }
+        echo json_encode(array(
+            'is_error'=>true,
+            'error_message'=>  validation_errors()
+        ));
+        return;
+    }
+    
+	public function mastercostumer_delete(){
+        cekmenu_ajax('mastercostumer');
+
+        $this->load->model('admin/mastercostumer_m');
+        $this->form_validation->set_rules('id', 'ID', 'trim|integer|required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $id=$this->form_validation->set_value('id');
+            
+            $data=$this->mastercostumer_m->delete_by_id($id);
+            echo json_encode(array(
+                'is_error'=>false,
             ));
             return;
         }

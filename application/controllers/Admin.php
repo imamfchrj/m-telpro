@@ -236,4 +236,33 @@ class Admin extends Auth_Controller {
 		$this->load->view('admin/areaservice_add',$data);
 	}
 
+
+
+	public function mastercostumer(){
+		$data['menu']="mastercostumer";
+		$this->load->model('admin/mastercostumer_m');
+		$data['values']=$this->mastercostumer_m->get_all();
+		$this->load->view('admin/mastercostumer',$data);
+	}
+
+	public function mastercostumer_add($id=0){
+		$data['menu']="mastercostumer";
+        if($id){
+            $this->form_validation->set_data(array(
+                'id'    =>  $id
+            ));
+            $this->form_validation->set_rules('id', 'id', 'trim|required|xss_clean|numeric|htmlentities');
+
+            if ($this->form_validation->run()) {
+				$this->load->model('admin/mastercostumer_m');
+                $id=$this->form_validation->set_value('id');
+				$data['values']=$this->mastercostumer_m->get_by_id($id);
+            }
+        }
+		$this->load->view('admin/mastercostumer_add',$data);
+	}
+
+
+	
+
 }
