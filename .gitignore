@@ -14,4 +14,11 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
-/vendor/
+.DS_Store
+.DS_Store
+.DS_Store
+**/.DS_Store
+*.DS_Store
+application/env.php
+application/env.php
+assets/img/*
